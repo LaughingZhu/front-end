@@ -70,6 +70,7 @@ const config: Config = {
 		'icon-[line-md--text-box-multiple-to-text-box-transition]',
 		'icon-[ic--sharp-show-chart]',
 		'icon-[mdi-light--settings]',
+		'icon-[material-symbols--vertical-split-outline-rounded]',
 	],
 };
 export default config;
