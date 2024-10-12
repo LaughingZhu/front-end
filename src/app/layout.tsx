@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`w-screen h-screen overflow-hidden ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`w-dvw h-dvh overflow-hidden ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <main className='w-full h-full bg-[#242424] flex overflow-hidden'>
           <Slider />

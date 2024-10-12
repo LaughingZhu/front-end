@@ -62,7 +62,7 @@ export default function Slider() {
       </div>
 
       <div
-        className='w-full flex justify-center pt-[30px] items-center'
+        className='w-full flex-none flex justify-center pt-[30px] items-center'
         onClick={() => setOpen(!open)}
       >
         <Icon
