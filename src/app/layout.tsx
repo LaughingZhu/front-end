@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Slider from "@/components/Slider";
 import Header from "@/components/Header";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,13 +31,20 @@ export default function RootLayout({
       <body
         className={`w-dvw h-dvh overflow-hidden ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className='w-full h-full bg-[#242424] flex overflow-hidden'>
-          <Slider />
-          <div className='flex-auto h-full flex flex-col justify-start'>
-            <Header />
-            {children}
-          </div>
-        </main>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className='w-full h-full bg-[#242424] flex overflow-hidden'>
+            <Slider />
+            <div className='flex-auto h-full flex flex-col justify-start'>
+              <Header />
+              {children}
+            </div>
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

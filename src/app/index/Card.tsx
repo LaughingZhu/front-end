@@ -21,9 +21,12 @@ export default function Card(props: Props) {
   return (
     <div className='flex w-full mt-5'>
       {data.map((item, index) => (
-        <div className='flex-auto relative' key={item.title}>
+        <div
+          className='flex-auto relative flex justify-center'
+          key={item.title}
+        >
           <CardItem index={index} total={data.length} />
-          <div className='absolute h-full flex flex-col justify-between top-0 left-[24px] py-6'>
+          <div className='absolute h-full flex flex-col justify-between top-0 left-10 py-6'>
             <div className='text-base font-bold'>{item.title}</div>
             <div className='text-3xl font-bold'>{item.description}</div>
             <a className='text-xs' href={item.link}>
