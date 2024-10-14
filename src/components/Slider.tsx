@@ -9,7 +9,7 @@ import { useMedia } from "react-use";
 export default function Slider() {
   const [active, setActive] = useState(0);
   const [open, setOpen] = useState<null | boolean>(null);
-  const isDesktop = useMedia("(min-width: 768px)");
+  const isDesktop = useMedia("(min-width: 1140)");
   useEffect(() => {
     if (open === null) {
       setOpen(isDesktop ? true : false);
